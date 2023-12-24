@@ -1,14 +1,31 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Transform Text</title>
-</head>
-<body>
-    <h2>Transform Text to Uppercase</h2>
-    <form method="post" action="{% url 'transform' %}">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'trial.css' %}" />
+    <title>Project Null</title>
+  </head>
+  <body>
+    <main>
+      <h1>TEXT TRANSFORMER</h1>
+
+      {% comment %} <form method="post" action="{% url 'transform' %}"> {% endcomment %}
+      <form method="post" action="">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Submit</button>
-    </form>
-</body>
+        
+        {{ form.text }}
+
+        <div class="wrapper">
+          {{ form.formatting }}
+          <button type="submit">GO</button>
+        </div>
+      </form>
+    </main>
+
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+  </body>
 </html>

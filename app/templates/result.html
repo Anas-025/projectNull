@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'trial.css' %}" />
+
+    <title>Project Null</title>
+  </head>
+  <body>
+    <main>
+      <h1>TEXT TRANSFORMER</h1>
+
+      <main>
+        <h3>Transformed Text:</h3>
+        <p class="result">{{ text }}</p>
+      </main>
+    </main>
+
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+  </body>
+</html>
