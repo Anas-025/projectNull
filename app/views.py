@@ -16,7 +16,7 @@ def index(request):
         if form.is_valid():
             response = requests.post(
                             'http://127.0.0.1:8000/app/api/util/v1/public/transform',
-                            data={'text': form.cleaned_data['text']},
+                            data={'text': form.cleaned_data['text'], 'formatting': form.cleaned_data['formatting']},
                             cookies=cookies,
                             headers=headers)
             if response.status_code == 200:

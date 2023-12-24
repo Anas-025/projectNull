@@ -109,42 +109,32 @@ main > form {
   z-index: 999;
 }
 
-button[type="submit"]{
-    color: white;
-    height: 100%;
-    padding-inline: 1.5rem;
+button[type="submit"] {
+  color: white;
+  height: 100%;
+  padding-inline: 1.5rem;
 
-    background-color: rgb(9, 10, 15);
-    border-radius: 4px;
+  background-color: rgb(9, 10, 15);
+  border-radius: 4px;
 
-    border: none;
+  border: none;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
-h3{
-    font-size: 1.5rem;
-    color: white;
-    text-align: center;
-    margin-bottom: 2rem;
+h3 {
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-main>p.result{
-    font-size: 1.4rem;
-    color: white;
-    text-align: center;
-    margin-bottom: 2rem;
+main > p.result {
+  font-size: 1.4rem;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
 }
-
-
-
-
-
-
-
-
-
-
 
 #stars {
   width: 1px;
