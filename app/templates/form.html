@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transform Text</title>
+</head>
+<body>
+    <h2>Transform Text to Uppercase</h2>
+    <form method="post" action="{% url 'transform' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
