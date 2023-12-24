@@ -11,7 +11,7 @@ def index(request):
     elif request.method == 'POST':
         form = MyForm(request.POST)
         csrf_token = request.POST['csrfmiddlewaretoken']
-        headers = {'X-CSRFToken': csrf_token}
+        headers = {'X-CSRFToken': csrf_token, 'Referer': 'https://project-null.vercel.app'}
         cookies = {'csrftoken': csrf_token}
         if form.is_valid():
             response = requests.post(
