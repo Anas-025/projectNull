@@ -1,27 +1,22 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static 'trial.css' %}" />
+
     <title>Project Null</title>
   </head>
   <body>
     <main>
       <h1>TEXT TRANSFORMER</h1>
 
-      {% comment %} <form method="post" action="{% url 'transform' %}"> {% endcomment %}
-      <form method="post" action="">
-        {% csrf_token %}
-        
-        {{ form.text }}
-
-        <div class="wrapper">
-          {{ form.formatting }}
-          <button type="submit">GO</button>
-        </div>
-      </form>
+      <main>
+        <h3>Transformed Text:</h3>
+        <p class="result">{{ text }}</p>
+      </main>
     </main>
 
     <div id="stars"></div>
