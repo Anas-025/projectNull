@@ -13,4 +13,4 @@ def transform(request):
         else:
             return HttpResponse("Invalid form")
     else:
-        return HttpResponse("Invalid request")
+        return HttpResponse("Invalid request for api call")

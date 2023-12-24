@@ -15,6 +15,7 @@ def index(request):
         cookies = {'csrftoken': csrf_token}
         if form.is_valid():
             response = requests.post(
+                            # 'http://127.0.0.1:8000/app/api/util/v1/public/transform',
                             'https://project-null-git-test-anas-025.vercel.app/app/api/util/v1/public/transform',
                             data={'text': form.cleaned_data['text'], 'formatting': form.cleaned_data['formatting']},
                             cookies=cookies,
