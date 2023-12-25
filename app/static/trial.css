@@ -270,5 +270,14 @@ main > p.result {
 }
 
 
+.app-redirect{
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 1.5rem;
+}
 
-
+.app-redirect>img{
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}

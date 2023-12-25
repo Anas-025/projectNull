@@ -270,5 +270,10 @@ main > p.result {
 }
 
 
-
+.app-redirect{
+  font-size: 1.5rem;
+  color: white;
+  margin-top: 1.5rem;
+  width: 1rem;
+}
 
