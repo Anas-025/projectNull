@@ -4,6 +4,22 @@
   padding: 0;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  cursor: pointer;
+  background: #888;
+  border-radius: 0.5rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
 body {
   font-family: Helvetica, sans-serif;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
@@ -19,15 +35,19 @@ main {
 
   height: 100vh;
 
-  padding: 5rem;
+  padding-block: 5rem;
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: clamp(1.5rem, 5vw, 3.5rem);
   font-weight: 800;
+  text-align: center;
   color: transparent;
   letter-spacing: 0.1rem;
+  line-height: clamp(1.5rem, 5vw, 3.5rem);
+  margin-inline: 0.8rem;
   background-clip: text;
+  -webkit-background-clip: text;
   background-color: #4158d0;
   background-image: linear-gradient(
     43deg,
@@ -58,15 +78,15 @@ main > form {
   align-items: center;
   gap: 3rem;
 
-  width: 100%;
+  width: min(50rem, 95%);
   height: 100%;
 }
 
 #id_text {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
   color: white;
 
-  width: min(50rem, 90%);
+  width: 100%;
   height: 40vh;
 
   padding: 1.5rem;
@@ -84,6 +104,7 @@ main > form {
 }
 
 .wrapper {
+  font-size: clamp(0.8rem, 3vw, 1.5rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -93,13 +114,14 @@ main > form {
 }
 
 #id_formatting {
-  font-size: 1.1rem;
+  font-size: inherit;
   text-align: center;
   color: white;
 
   width: 100%;
 
   padding: 1.5rem 1rem;
+  padding-block: clamp(1rem, 2vw, 1rem);
 
   background-color: rgb(9, 10, 15);
   border-radius: 4px;
@@ -110,6 +132,7 @@ main > form {
 }
 
 button[type="submit"] {
+  font-size: inherit;
   color: white;
   height: 100%;
   padding-inline: 1.5rem;
@@ -123,14 +146,14 @@ button[type="submit"] {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);  
   color: white;
   text-align: center;
   margin-bottom: 2rem;
 }
 
 main > p.result {
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 3vw, 1.5rem);
   color: white;
   text-align: center;
   margin-bottom: 2rem;
@@ -245,3 +268,7 @@ main > p.result {
     transform: translateY(-2000px);
   }
 }
+
+
+
+
